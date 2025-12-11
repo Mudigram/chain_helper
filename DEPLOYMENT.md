@@ -96,6 +96,35 @@ For now, use localhost for testing:
 
 ---
 
+## Frontend Deployment (Netlify)
+
+Since you have a `netlify.toml`, you can deploy to Netlify:
+
+### Step 1: Push to GitHub
+
+### Step 2: Create Site on Netlify
+1. Go to [app.netlify.com](https://app.netlify.com)
+2. "Add new site" → "Import from existing project"
+3. Select GitHub → Choose your repository
+
+### Step 3: Configure Build
+- **Base directory**: `frontend`
+- **Build command**: `npm run build`
+- **Publish directory**: `.next` (or let Netlify auto-detect Next.js)
+
+### Step 4: Add Environment Variable (Crucial!)
+1. Go to **Site Settings** > **Configuration** > **Environment variables**
+2. Click **Add a variable**
+3. Key: `NEXT_PUBLIC_API_URL`
+4. Value: `https://chain-helper.onrender.com` (Your Render URL)
+5. Click **Create variable**
+
+### Step 5: Deploy
+- Click "Deploy site"
+
+
+---
+
 ## Backend Deployment (Railway)
 
 Railway is great for Python/FastAPI backends with free tier.
