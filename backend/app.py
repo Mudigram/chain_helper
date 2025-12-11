@@ -26,10 +26,9 @@ ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",
-        "https://*.vercel.app",
-        "https://*.netlify.app",
-        "https://*-chainhelper.netlify.app",
+        "*",  # Allow all origins for the interview demo
+        # "https://*.vercel.app",
+        # "https://*.netlify.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
