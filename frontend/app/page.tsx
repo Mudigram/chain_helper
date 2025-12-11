@@ -15,6 +15,11 @@ export default function Home() {
 
   const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001";
 
+  // Debug log to check what URL is being used
+  if (typeof window !== "undefined") {
+    console.log("Current API_BASE:", API_BASE);
+  }
+
   // -----------------------------
   // CONNECT PHANTOM WALLET
   // -----------------------------
