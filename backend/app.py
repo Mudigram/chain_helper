@@ -27,8 +27,9 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://*.vercel.app",  # Allow all Vercel preview deployments
-        # Add your production frontend URL here after deployment
+        "https://*.vercel.app",
+        "https://*.netlify.app",
+        "https://*-chainhelper.netlify.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
