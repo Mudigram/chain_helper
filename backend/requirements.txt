@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+solana
+solders
+openai
+python-dotenv
