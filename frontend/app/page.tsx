@@ -13,7 +13,7 @@ export default function Home() {
   const [aiCommand, setAiCommand] = useState("");
   const [txResult, setTxResult] = useState<any>(null);
 
-  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://chain-helper.onrender.com";
+  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001";
 
   // -----------------------------
   // CONNECT PHANTOM WALLET
